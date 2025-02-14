@@ -38,7 +38,7 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 if DEBUG:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 else:
-    ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(" ")
+    ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "croplife-ds6-project.onrender.com localhost 127.0.0.1").split()
 
 
 # Application definition
