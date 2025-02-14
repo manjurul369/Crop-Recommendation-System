@@ -1,0 +1,395 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agriculture Landing Page</title>
+  <link rel="stylesheet" href="{%static 'assests/style.css' %}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        position: relative;
+    }
+
+    section{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: url("{%static 'assests/images/background.jpg' %}");
+        background-size: cover;
+        background-position: bottom;
+        flex-direction: column;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+    }
+
+    #logo{
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .navbar ul{
+      display: flex;
+    }
+
+
+    .navbar ul li{
+      padding: 0 20px;
+      list-style: none;
+    }
+
+    .navbar ul li a{
+      text-decoration: none;
+      font-size: 30px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: 0.5s;
+      font-weight: 500;
+    }
+
+    .navbar ul li a:hover{
+      color: #00dc0f;
+    }
+
+    .form{
+      padding: 40px;
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .form p{
+      font-size: 12px;
+      color: #727272;
+      margin-top: -30px;
+    }
+
+    .form p a{
+      color: rgba(26, 9, 255, 0.676);
+    }
+
+    .form header{
+      font-size: 30px;
+      color: #1f1f1f;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .fields{
+      position: relative;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .parts{
+      display: flex;
+    }
+
+    .nutrient, .weather{
+      position: relative;
+    }
+
+    .title{
+      position: relative;
+      font-size: 20px;
+      font-weight: 600;
+      color: #727272;
+    }
+
+    .input_field{
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+
+    .input_field label{
+      font-size: 15px;
+      color: #1f1f1f;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .input_field input{
+      padding: 8px 15px;
+      font-size: 15px;
+      color: #1f1f1f;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+    .input_field input[type="number"]::-webkit-inner-spin-button,
+    .input_field input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .submit_result{
+      position: relative;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .submit_result p{
+      margin: 0;
+      font-size: 20px;
+      margin-left: 20px;
+      color: #1f1f1f;
+    }
+
+    .pred_btn{
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      background: #00dc0f;
+      font-size: 15px;
+      border-radius: 4px;
+      transition: 0.5s;
+      border: none;
+    }
+
+    
+    @media screen and (max-width: 1400px) and (min-width: 1200px){
+      #logo{
+        font-size: 50px;
+      }
+      .navbar ul li a{
+        font-size: 25px;
+      }
+      .title{
+        font-size: 18px;
+      }
+      .input_field input{
+        font-size: 14px;
+        padding: 7px 14px;
+        width: 220px;
+      }
+      .input_field label{
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) and (min-width: 1000px){
+      #logo{
+        font-size: 40px;
+      }
+      .navbar ul li a{
+        font-size: 20px;
+      }
+      .navbar{
+        padding: 40px 60px;
+      }
+      .title{
+        font-size: 16px;
+      }
+      .input_field input{
+        font-size: 12px;
+        padding: 6px 12px;
+        width: 200px;
+      }
+      .input_field label{
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+    }
+
+    @media screen and (max-width: 1000px){
+      #logo{
+        font-size: 30px;
+      }
+      .navbar ul li a{
+        font-size: 15px;
+      }
+      .navbar{
+        padding: 40px 60px;
+      }
+      .title{
+        font-size: 14px;
+      }
+      .input_field input{
+        font-size: 10px;
+        padding: 5px 10px;
+        width: 170px;
+      }
+      .input_field label{
+        font-size: 10px;
+        margin-bottom: 3px;
+        margin-top: -7px;
+      }
+      .form header{
+        font-size: 25px;
+        margin-bottom: 10px;
+      }
+      .form p{
+        font-size: 10px;
+        margin-top: -35px;
+      }
+      .submit_result{
+        margin-top: 15px;
+      }
+      .pred_btn{
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+      .submit_result p{
+        font-size: 15px;
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (max-width: 900px){
+      .fields{
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 800px){
+      #logo{
+        font-size: 25px;
+      }
+      .navbar ul li a{
+        font-size: 12px;
+      }
+      .navbar{
+        padding: 30px 50px;
+      }
+    }
+
+    @media screen and (max-width: 600px){
+      #logo{
+        font-size: 20px;
+      }
+      .navbar ul li a{
+        font-size: 10px;
+      }
+      .navbar{
+        padding: 20px 30px;
+      }
+      .navbar ul li{
+        padding: 0 10px;
+      }
+      section{
+        padding: 50px;
+      }
+    }
+
+    @media screen and (max-width: 575px){
+      section{
+        padding: 20px;
+      }
+    }
+
+    @media screen and (max-width: 450px){
+      .navbar ul li{
+        padding: 0 8px;
+      }
+      .input_field input{
+        font-size: 8px;
+        padding: 5px 10px;
+        width: 150px;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <section>
+    <div class="navbar">
+      <a href="#" id="logo">CropsLife.</a>
+      <ul>
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="prediction">Prediction</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="form">
+      <header>Please Fill this Form</header>
+      <form action="/process">
+        <div class="nutrient">
+          <span class="title">Nutrient Contents</span>
+          <div class="fields">
+            <div class="parts">
+              <div class="input_field">
+                <label>Nitrogen Level</label>
+                <input type="number" step="any" name="N" placeholder="Enter Nitrogen Content" required>
+              </div>
+              <div class="input_field">
+                <label>Phosphorus Level</label>
+                <input type="number" step="any" name="P" placeholder="Enter Phosphorus Content" required>
+              </div>
+            </div>
+            <div class="parts">
+              <div class="input_field">
+                <label>Pottasium Level</label>
+                <input type="number" step="any" name="K" placeholder="Enter Pottasium Content" required>
+              </div>
+              <div class="input_field">
+                <label>pH Level</label>
+                <input type="number" step="any" name="pH" placeholder="Enter pH Content" required>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="weather">
+          <span class="title">Weather Conditions</span>
+          <div class="fields">
+            <div class="parts">
+              <div class="input_field">
+                <label>Temperature (°C)</label>
+                <input type="number" step="any" name="temp" placeholder="Enter Average Temperature" required>
+              </div>
+              <div class="input_field">
+                <label>Humidity Level</label>
+                <input type="number" step="any" name="humidity" placeholder="Enter Average Humidity" required>
+              </div>  
+            </div>
+            <div class="parts">
+              <div class="input_field">
+                <label>Rainfall (mm)</label>
+                <input type="number" step="any" name="rainfall" placeholder="Enter Average Rainfall" required>
+              </div>  
+            </div>
+          </div>
+        </div>
+        <p>If you don't have these data. Please <a href="contact/">contact us</a> for hire an expert.</p>
+        <div class="submit_result">
+          <button class="pred_btn">Submit</button>
+          <p><span></span></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
