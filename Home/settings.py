@@ -28,6 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+# SECRET_KEY = 'django-insecure-^i*ci8_y@mr16hw19=@jmo@a2afw#vmcn^5&vlann6k!!4g7eg'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get("DEBUG", "False") == "True"
 
@@ -39,6 +41,9 @@ if DEBUG:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 else:
     ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "croplife-ds6-project.onrender.com localhost 127.0.0.1").split()
+
+# settings.py
+# DEBUG = True  # Handles "True"/"true"
 
 
 # Application definition
@@ -94,8 +99,23 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get("DATABASE_URL")
-DATABASES['default'] = dj_database_url.parse(database_url)
+# database_url = os.environ.get("DATABASE_URL")
+# DATABASES['default'] = dj_database_url.parse(database_url)
+
+
+# Default SQLite database for local development
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# Override with DATABASE_URL if set (for production)
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL:
+    DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
