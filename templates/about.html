@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    
+        body{
+            position: relative;
+        }
+    
+        section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: url("{%static 'assests/images/background.jpg' %}");
+            background-size: cover;
+            background-position: bottom;
+            flex-direction: column;
+        }
+    
+        .navbar{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+        }
+    
+        #logo{
+          font-size: 60px;
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 2px;
+        }
+    
+        .navbar ul{
+          display: flex;
+        }
+    
+    
+        .navbar ul li{
+          padding: 0 20px;
+          list-style: none;
+        }
+    
+        .navbar ul li a{
+          text-decoration: none;
+          font-size: 30px;
+          color: #fff;
+          text-shadow: 0 0 10px rgba(0,0,0,0.5);
+          transition: 0.5s;
+          font-weight: 500;
+        }
+    
+        .navbar ul li a:hover{
+          color: #00dc0f;
+        }
+    
+        section h1{
+          font-size: 60px;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="navbar">
+          <a href="/" id="logo">CropsLife.</a>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/predict/">Prediction</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+        <h1>About</h1>
+    </section>
+</body>
+</html>

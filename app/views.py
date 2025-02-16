@@ -9,6 +9,12 @@ def index(request):
 def predict(request):
     return render(request, 'predict.html')
 
+def about(request):
+    return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
 def process(request):
     loaded_model = joblib.load("./data/Crop_recommendation_model.joblib")
     sample_data = pd.DataFrame({
