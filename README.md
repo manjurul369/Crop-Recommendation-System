@@ -15,18 +15,34 @@ A machine learning-based web application to recommend the best crops for agricul
 ---
 
 ## 🛠️ Technologies Used
-**Programming Language**
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-- **Machine Learning**: 
-  - `scikit-learn` (Random Forest Classifier)
-- **Data Processing & Visualization**:
-  - `pandas` (Data Cleaning/Analysis)
-  - `NumPy` (Numerical Operations)
-  - `Matplotlib` & `Seaborn` (Data Visualization)
-- **Web Development**:
-  - **Backend**: Django (Python Framework)
-  - **Frontend**: HTML, CSS, JavaScript
-  - **Database**: SQLite (Django Default)
+### Programming Language
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+</p>
+
+### Machine Learning
+<p align="left">
+  <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+</p>
+
+### Data Processing & Visualization
+<p align="left">
+  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/matplotlib-FF9A00?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/seaborn-4C766A?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
+</p>
+
+### Web Development
+<p align="left">
+  <b>Backend:</b> <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django">
+</p>
+<p align="left">
+  <b>Frontend:</b> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+</p>
+<p align="left">
+  <b>Database:</b> <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+</p>
 
 ---
 
