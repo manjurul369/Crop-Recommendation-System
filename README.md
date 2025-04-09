@@ -113,6 +113,5 @@ Feel free to submit issues or PRs!
 ---
 
 ## 📧 Contact
-LinkedIn: https://www.linkedin.com/in/manjurul369/
-Email: manjurul.ses.bu@gmail.com
-
+- **LinkedIn**: https://www.linkedin.com/in/manjurul369/
+- **Email**: manjurul.ses.bu@gmail.com
