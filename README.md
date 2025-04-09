@@ -94,3 +94,25 @@ A machine learning-based web application to recommend the best crops for agricul
 - Model Accuracy: **99.3%** (Random Forest Classifier).
 - Top Recommended Crops: **Groundnut, Rice, Maize**.
 - Farmers using this system reported **20-30% higher yields** in trials.
+
+---
+
+## 🌐 Live Demo
+Explore the deployed project:
+👉 https://croplife-ds6-project.onrender.com/
+
+---
+
+## 🤝 Contributing
+Feel free to submit issues or PRs!
+1. Fork the repo.
+2. Create a branch: git checkout -b feature/your-feature.
+3. Commit changes: git commit -m 'Add amazing feature'.
+4. Push: git push origin feature/your-feature.
+
+---
+
+## 📧 Contact
+LinkedIn: https://www.linkedin.com/in/manjurul369/
+Email: manjurul.ses.bu@gmail.com
+
