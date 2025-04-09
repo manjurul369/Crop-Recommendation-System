@@ -29,3 +29,25 @@ A machine learning-based web application to recommend the best crops for agricul
    ```bash
    git clone https://github.com/manjurul369/Crop-Recommendation-System.git
    cd Crop-Recommendation-System
+
+2. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+ 
+4. Run migrations:
+
+   ```bash
+   python manage.py migrate
+   
+5. Start the Django server:
+
+   ```bash
+   python manage.py runserver
